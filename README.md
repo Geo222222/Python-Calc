@@ -1,77 +1,98 @@
-# 🧮 Python Calc – Command Line Calculator
+# 🧮 PyQt6 Calculator – Responsive GUI with Copy/Paste and Testing
 
-## 🧾 Overview
+## 📋 Overview
 
-This project is a simple command-line calculator built with Python. It allows users to perform basic arithmetic operations including addition, subtraction, multiplication, and division. The calculator continuously prompts for user input and handles invalid input gracefully.
+A polished, keyboard-friendly, and responsive calculator built using **PyQt6**. Supports all basic arithmetic operations and is designed with usability in mind. This project features:
 
-This project demonstrates basic control flow, input handling, and arithmetic logic in Python.
+- A resizable and responsive GUI
+- Keyboard and mouse support
+- Clipboard integration for copy/paste
+- Unit testing for core logic
 
 ---
 
 ## 🧰 Technologies Used
 
-- Python 3
-- Standard libraries: `sys`, `math` (if extended)
-- Command-line interface
+- Python 3.x
+- PyQt6
+- PyTest (for unit testing)
 
 ---
 
 ## 📁 Project Files
 
 ```
-Python-Calc/
-├── calc.py              # Main calculator logic
-└── README.md            # Project documentation
+PyQt_Calculator/
+├── calculator.py         # Main PyQt6 calculator interface
+├── logic.py              # Calculation logic (isolated for testing)
+├── test_logic.py         # PyTest unit tests for calculator operations
+├── README.md             # Project documentation
 ```
 
 ---
 
-## 🔢 Features
+## 💡 Features
 
-- Performs the four basic operations: `+`, `-`, `*`, `/`
-- Supports continuous operation until the user exits
-- Input validation to catch errors like division by zero
-- Option to clear or reset inputs (if implemented)
+- Responsive layout with grid-based buttons
+- Keyboard support (arithmetic, backspace, enter, etc.)
+- Clipboard integration: Ctrl+C (copy), Ctrl+V (paste)
+- Error handling and result validation
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repository:
+1. Clone the repo:
 ```bash
-git clone https://github.com/Geo222222/Python-Calc.git
-cd Python-Calc
+git clone https://github.com/Geo222222/PyQt_Calculator.git
+cd PyQt_Calculator
 ```
 
-2. Run the script:
+2. Install dependencies:
 ```bash
-python calc.py
+pip install PyQt6 pytest
 ```
 
-3. Follow on-screen prompts to input numbers and select operations.
-
----
-
-## 🧠 Example Usage
-
+3. Run the application:
 ```bash
-Enter first number: 15
-Enter operator (+ - * /): *
-Enter second number: 3
-Result: 45
+python calculator.py
 ```
 
 ---
 
-## 📌 Future Enhancements
+## ✅ Running Unit Tests
 
-- Add support for exponentiation and modulo
-- Add input history or undo function
-- Implement a GUI using Tkinter or PyQt
-- Include unit testing for operation functions
+```bash
+pytest test_logic.py
+```
+
+Tests cover:
+- Basic operations (`+`, `-`, `*`, `/`)
+- Edge cases (divide by zero, invalid input)
+- Result formatting
+
+---
+
+## 🧠 Keyboard Shortcuts
+
+- `0-9`, `.`, `+`, `-`, `*`, `/` → Input
+- `Enter / Return` → Evaluate expression
+- `Esc` → Clear input
+- `Backspace` → Delete last character
+- `Ctrl+C` → Copy result
+- `Ctrl+V` → Paste numeric value into input
+
+---
+
+## 📌 Future Improvements
+
+- Add history panel for previous calculations
+- Enable scientific functions (sqrt, log, sin, cos)
+- Theming (dark/light mode toggle)
+- Export results to CSV or text
 
 ---
 
 **Author:** [Geo222222](https://github.com/Geo222222)  
-**Focus:** Python Basics • CLI Tools • Functional Programming
+**Focus:** GUI Engineering • Functional Programming • Automated Testing
 
